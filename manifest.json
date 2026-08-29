@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "VITOL Auto-Login",
+  "version": "1.0",
+  "description": "Automates login for VITOL (moovitol.vit.ac.in) with multi-account support.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://moovitol.vit.ac.in/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "VITOL Auto-Login Settings"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moovitol.vit.ac.in/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
